@@ -21,10 +21,6 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-img {
-  width: 100%;
-}
-
 a {
   text-decoration: none;
 }
@@ -55,20 +51,8 @@ header .container {
   align-items: center;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.logo img {
-  width: 40px;
-  margin-right: .6rem;
-  margin-top: -0.6rem;
-}
-
-.logo h3 {
-  color: var(--darkTwo);
+header .container .logo h3 {
+  color: var(--mainColor);
   font-size: 1.55rem;
   line-height: 1.2;
   font-weight: 700;
@@ -110,23 +94,22 @@ header .container {
 
 .showcase-area {
   margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .showcase-area .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* align-items: center; */
-  /* justify-content: center; */
 }
 
-.big-title {
+.showcase-area .container .left .big-title {
   font-size: 1.4rem;
   color: var(--darkOne);
   text-transform: capitalize;
   line-height: 1.4;
 }
 
-.text {
+.showcase-area .container .left .text {
   color: var(--lightOne);
   font-size: 1.1rem;
   margin: 1.9rem 0 2.5rem;
@@ -135,8 +118,40 @@ header .container {
 }
 
 
-/* 
-4k RESOLUSI
-120* SUDUT PANDANG LENSA
-150* TILT ATAS BAWAH
-*/
+
+.container .title{
+  color: var(--darkOne);
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.container .products-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap:2rem;
+}
+
+.container .products-container .product{
+  text-align: center;
+  padding:3rem 2rem;
+  background: #fff;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+  outline: .1rem solid var(--mainColor);
+  outline-offset: -1.5rem;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.container .products-container .product:hover{
+  outline: .2rem solid var(--mainColor);
+  outline-offset: 0;
+}
+
+.container .products-container .product img{
+  width: 100%;
+}
+
+.container .products-container .product:hover img{
+  transform: scale(.9);
+}
